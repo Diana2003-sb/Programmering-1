@@ -1,1 +1,1 @@
-print("diana")
+print("diana är bra")
