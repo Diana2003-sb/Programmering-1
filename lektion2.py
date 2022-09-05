@@ -1,6 +1,6 @@
 from re import A
 
-
+"""
 age=19 
 months=228
 second=599184000
@@ -21,3 +21,5 @@ b=2
 print(e**b)
 eb=4**2
 print(8-6)
+"""
+
