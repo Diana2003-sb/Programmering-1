@@ -1,4 +1,6 @@
+
 from re import A
+from tkinter.messagebox import QUESTION
 
 """
 age=19 
@@ -22,4 +24,6 @@ print(e**b)
 eb=4**2
 print(8-6)
 """
+QUESTION=int(input(""))
+
 
