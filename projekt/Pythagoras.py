@@ -8,24 +8,22 @@ if A * A == B * B + C * C or B * B == A * A + C * C or C * C == A * A + B * B:
 else:
     print("Nej")
 Fråga1 = input(
-    "Nu vet du att dessa tal är en pythagoras tal eller inte, vill du Vill du se Pythagoras tal mindre än 100? A) Ja\n, B) Nej\n"
+    "Nu vet du att dessa tal är en pythagoras tal eller inte, vill du se många Pythagoras tal?\nA)Ja\n B) Nej\n"
 )
-if Fråga1 == "A":
-    c, m, limits = 0, 2, 100
-# Limiting c would limit
-# all a, b and c
-while c < limits:
-    # Now loop on n from 1 to m-1
-    for n in range(1, m):
-        a = m * m - n * n
-        b = 2 * m * n
-        c = m * m + n * n
-        # if c is greater than
-        # limit then break it
-        if c > limits:
-            break
-        print(a, b, c)
-    m = m + 1
+# Först definierar vi gränsvariabeln och tilldelar den värdet 100.
+if Fråga1 == "Ja":
+    GränsVariabel = 100
+    # Sedan fortsätter vi med en for loop som loopar från ett till gränsvaribeln.
+    for A in range(1, GränsVariabel):
+        B = A + 1
+        C = B + 1
+        # I fortsättningen av for-slingan skriver vi en while-loop som upprepas och körs tills det mindre c:et är lika med gränsvariablen. I while-slingan, skriv en annan while-loop, som lägger till en enhet till c tills c*c är mindre än a*a + b*b.
+        while C <= GränsVariabel:
+            while C * C < A * A + B * B:
+                C = C + 1
+            if C * C == A * A + B * B and C <= GränsVariabel:
+                print(A, B, C)
+            B = B + 1
 
-else:
-    print("Programet avslutas")
+elif Fråga1 == "Nej":
+    print("Programmet avslutas")
